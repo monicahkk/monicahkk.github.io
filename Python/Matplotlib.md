@@ -46,3 +46,24 @@ fig = plt.figure(figsize=(a, b), dpi=dpi)
 # figsize 设置图形的大小，a 为图形的宽， b 为图形的高，单位为英寸
 # dpi 为设置图形每英寸的点数
 ```
+
+---------------
+
+import matplotlib 报错
+
+```
+from . import ft2font
+ImportError: DLL load failed: 找不到指定的模块。
+```
+
+解决方法：
+
+网友碰到这个问题的人蛮多的，解决方法多种多样，有人说是conda pip经常会出现的问题，换成pip先安装freetype在安装matplotlib就行，但是我这里两个python版本呢，分别有不同用途。最后看了sof上一个大佬的帖子，感觉靠谱
+
+```python
+pip uninstall matplotlib
+pip install matplotlib==3.0.3
+```
+
+附上网址：https://stackoverflow.com/questions/24251102/from-matplotlib-import-ft2font-importerror-dll-load-failed-the-specified-pro
+
